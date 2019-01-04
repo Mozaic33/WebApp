@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+    dotnetcorearchitecture_web:
+        build:
+            context: .
+            dockerfile: dockerfile
+            args:
+                ANGULAR_ENVIRONMENT: Development
+                ASPNETCORE_ENVIRONMENT: Development
+        image: dotnetcore2.2
+        container_name: dotnetcore2.2
+        ports:
+            - 8095:80
